@@ -12,7 +12,7 @@ public class caculorTest extends TestCase {
 
 
     public void testSum() {
-        assertEquals(5d, mCalculator.sum(1d, 5d), 0);
+        assertEquals(6d, mCalculator.sum(1d, 5d), 0);
     }
 
     public void testSubtract() {
