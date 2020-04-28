@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: test
-        path: app\build\test-results\testReleaseUnitTest
+        path: app/build/test-results/testReleaseUnitTest
   lint:
      runs-on: ubuntu-latest
 
@@ -37,4 +37,4 @@ jobs:
      - uses: actions/upload-artifact@v1
        with:
         name: test1
-        path: \app
+        path: /app
