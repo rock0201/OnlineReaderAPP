@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -18,11 +18,11 @@ jobs:
       with:
         java-version: 1.8
     - name: code check
-      run: ./gradlew lint
+      run: gradlew lint
     - uses: actions/upload-artifact@v1
       with:
         name: test
-        path: app/build/test-results
+        path: app\build\test-results\testReleaseUnitTest
   lint:
      runs-on: ubuntu-latest
 
@@ -33,5 +33,8 @@ jobs:
        with:
         java-version: 1.8
      - name: code check
-       run: ./gradlew lint
-
+       run: gradlew lint
+     - uses: actions/upload-artifact@v1
+       with:
+        name: test1
+        path: \app
