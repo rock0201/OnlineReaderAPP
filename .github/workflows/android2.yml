@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: 1.8
     - name: code check
-      run: gradlew lint
+      run: ./gradlew lint
     - uses: actions/upload-artifact@v1
       with:
         name: test
@@ -33,7 +33,7 @@ jobs:
        with:
         java-version: 1.8
      - name: code check
-       run: gradlew lint
+       run: ./gradlew lint
      - uses: actions/upload-artifact@v1
        with:
         name: test1
