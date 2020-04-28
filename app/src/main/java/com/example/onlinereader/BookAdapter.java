@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,8 +56,12 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         Book book = mBookList.get(position);
+
+
+
         holder.bookImage.setImageResource(book.getImageId());
         holder.bookName.setText(book.getName());
+
     }
 
     @Override

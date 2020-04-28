@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.onlinereader">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
+
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,6 +27,22 @@
         </activity>
 
         <activity android:name=".Reader_Import">
+        </activity>
+        <activity
+            android:name=".Book_Read"
+            >
+        </activity>
+
+        <activity
+            android:name="com.hw.txtreaderlib.ui.HwTxtPlayActivity"
+            android:theme="@style/HwTxtFullScreen"></activity>
+
+        <activity
+            android:name=".Import_View"
+            tools:ignore="DuplicateActivity">
+        </activity>
+        <activity
+            android:name=".RvOneActivity">
         </activity>
 
     </application>

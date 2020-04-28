@@ -5,11 +5,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
+
+import com.bifan.txtreaderlib.ui.HwTxtPlayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,10 +50,15 @@ public class MainActivity extends AppCompatActivity {
         initBook();
 //列表
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.book_list);
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         BookAdapter adapter = new BookAdapter(bookList);
+
         recyclerView.setAdapter(adapter);
+
+
+
+
 
     }
 
@@ -79,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
     }
 
+
     private void showPopupMenu(View view) {
         // 这里的view代表popupMenu需要依附的view
         PopupMenu popupMenu = new PopupMenu(MainActivity.this, view);
@@ -95,7 +104,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent_find);
                         break;
                     case R.id.book_import :
-                        startActivity(intent_import);
+                        //startActivity(intent_import);
+                        //startActivity(new Intent(MainActivity.this,Book_Read.class));
+                        startActivity(new Intent(MainActivity.this,RvOneActivity.class));
                         break;
                     default:
                         break;
