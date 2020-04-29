@@ -72,7 +72,7 @@ public class Reader_Import extends AppCompatActivity {
 
 
         try {
-            //新建文件
+            //新建文件jia
             File saveFile = new File(sdCardDir, "user.txt");
 
             if (!saveFile.exists()) {
